@@ -347,7 +347,7 @@ input[type=range]::-moz-range-thumb{
 <div class="r"><label>Dringlichkeit</label><select id="s2"><option value="">- ausw&#228;hlen -</option><option value="0">Sofort (10-30 min)</option><option value="1">Keine Verf&#252;gbarkeit</option><option value="2">Knappe Kapa (Event)</option><option value="3">Kurzfr. Umplanung</option><option value="4">Normal</option></select></div>
 <div class="r"><label>Zweck / Saison</label><select id="s3"><option value="">- ausw&#228;hlen -</option><option value="0">Sicherheitskonferenz</option><option value="1">Festivals (Oktoberfest)</option><option value="2">Messe</option><option value="3">Sport / Fu&#223;ball</option><option value="4">Konzerte</option><option value="5">Standard</option></select></div>
 <div class="r"><label>Planung</label><select id="s4"><option value="">- ausw&#228;hlen -</option><option value="0">Kurzfristig (1-24h)</option><option value="1">Mittelfristig</option><option value="2">Langfristig (ab 1 Wo.)</option></select></div>
-<div class="r"><label>Extras</label><select id="s5"><option value="">- ausw&#228;hlen -</option><option value="0">Guide + Betreuung</option><option value="1">Blumen, Getr&#228;nke</option><option value="2">Engl. Fahrer + Anzug</option><option value="3">Ski-Gep&#228;ck</option><option value="4">Kindersitze</option><option value="5">Keine</option></select></div>
+<div class="r"><label>Extras</label><select id="s5"><option value="">- ausw&#228;hlen -</option><option value="0">Guide + Betreuung</option><option value="1">Blumen, Getr&#228;nke</option><option value="2">Engl. Fahrer + Anzug</option><option value="3">Ski-Gep&#228;ck</option><option value="4">Kindersitze</option><option value="5">Keine</option><option value="6">Maut</option></select></div>
 <div class="r"><label>Zusammenarbeit</label><select id="s6"><option value="">- ausw&#228;hlen -</option><option value="0">Kurzfristig</option><option value="1">Mittelfristig</option><option value="2">Langfristig</option></select></div>
 <div class="r"><label>Buchungen</label><select id="s7"><option value="">- ausw&#228;hlen -</option><option value="0">1 (nur Hin)</option><option value="1">2 (Hin + Zur&#252;ck)</option><option value="2">ab 3</option></select></div>
 <div class="r"><label>Kapa-Auslastung</label><select id="s8"><option value="">- ausw&#228;hlen -</option><option value="0">Eigene Flotte</option><option value="1">Externer Partner</option></select></div>
@@ -413,7 +413,7 @@ tBtn.addEventListener("click",function(){
 });
  
 /* === IDENTICAL CALCULATION LOGIC (unchanged) === */
-var S=[[0,0,-.05,-.03,0,-.08],[0,.05,-.05],[.25,.2,.15,.1,0],[.15,.12,.1,.08,.05,0],[.1,0,-.05],[.12,.1,.08,.05,.03,0],[.05,0,-.05],[0,-.03,-.05],[0,.08]];
+var S=[[0,0,-.05,-.03,0,-.08],[0,.05,-.05],[.25,.2,.15,.1,0],[.15,.12,.1,.08,.05,0],[.1,0,-.05],[.12,.1,.08,.05,.03,0,.06],[.05,0,-.05],[0,-.03,-.05],[0,.08]];
 var NM=["Anfrage","Herkunft","Dringl.","Zweck","Planung","Extras","Zusamm.","Buchungen","Kapa"];
 var PP={standard:125,business:125,first:145,van:135};
 var KR={standard:2.5,business:2.7,first:2.8,van:2.7};
