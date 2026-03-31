@@ -14,81 +14,15 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 html{font-size:16px;-webkit-text-size-adjust:100%}
- 
-/* ========== THEME SYSTEM ========== */
-:root{
-  --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;
-  --card:rgba(255,255,255,.04);--card-border:rgba(255,255,255,.08);--card-hover:rgba(255,255,255,.06);
-  --glass:rgba(255,255,255,.03);--glass-border:rgba(255,255,255,.06);
-  --text:#f0f0f0;--text2:#999;--text3:#555;
-  --accent:#c9a96e;--accent2:#b8944f;--accent-glow:rgba(201,169,110,.15);
-  --input-bg:rgba(255,255,255,.05);--input-border:rgba(255,255,255,.1);--input-focus:rgba(201,169,110,.3);
-  --green:#4ecca3;--green-bg:rgba(78,204,163,.1);
-  --coral:#e07b5a;--coral-bg:rgba(224,123,90,.1);
-  --shadow:0 8px 32px rgba(0,0,0,.4);
-  --shadow-sm:0 2px 8px rgba(0,0,0,.3);
-  --radius:16px;--radius-sm:10px;
-  --mono:'JetBrains Mono',Consolas,monospace;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --3d-offset:0 4px 6px rgba(0,0,0,.3),0 1px 3px rgba(0,0,0,.2);
-  --topbar-bg:rgba(10,10,10,.85);
-}
-[data-theme="light"]{
-  --bg:#f0ede8;--bg2:#e8e4dd;--bg3:#ddd9d2;
-  --card:rgba(255,255,255,.7);--card-border:rgba(0,0,0,.08);--card-hover:rgba(255,255,255,.85);
-  --glass:rgba(255,255,255,.5);--glass-border:rgba(0,0,0,.06);
-  --text:#1a1a1a;--text2:#666;--text3:#aaa;
-  --accent:#8b6f3a;--accent2:#7a6030;--accent-glow:rgba(139,111,58,.1);
-  --input-bg:rgba(255,255,255,.8);--input-border:rgba(0,0,0,.12);--input-focus:rgba(139,111,58,.25);
-  --green:#0f6e56;--green-bg:rgba(15,110,86,.08);
-  --coral:#993c1d;--coral-bg:rgba(153,60,29,.08);
-  --shadow:0 8px 32px rgba(0,0,0,.08);
-  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
-  --3d-offset:0 4px 6px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);
-  --topbar-bg:rgba(240,237,232,.9);
-}
- 
-body{
-  font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5;
-  overflow-x:hidden;transition:background .4s,color .4s;
-  min-height:100vh;
-}
- 
-/* ========== 3D BACKGROUND ========== */
-.bg-3d{
-  position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 10%,rgba(201,169,110,.06),transparent),
-    radial-gradient(ellipse 60% 50% at 80% 80%,rgba(201,169,110,.04),transparent),
-    radial-gradient(ellipse 100% 100% at 50% 50%,rgba(30,30,30,.5),transparent);
-}
-[data-theme="light"] .bg-3d{
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 10%,rgba(201,169,110,.08),transparent),
-    radial-gradient(ellipse 60% 50% at 80% 80%,rgba(139,111,58,.05),transparent);
-}
-.bg-grid{
-  position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;
-  opacity:.03;
-  background-image:
-    linear-gradient(rgba(201,169,110,.3) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(201,169,110,.3) 1px,transparent 1px);
-  background-size:60px 60px;
-}
+:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--card:rgba(255,255,255,.04);--card-border:rgba(255,255,255,.08);--card-hover:rgba(255,255,255,.06);--glass:rgba(255,255,255,.03);--glass-border:rgba(255,255,255,.06);--text:#f0f0f0;--text2:#999;--text3:#555;--accent:#c9a96e;--accent2:#b8944f;--accent-glow:rgba(201,169,110,.15);--input-bg:rgba(255,255,255,.05);--input-border:rgba(255,255,255,.1);--input-focus:rgba(201,169,110,.3);--green:#4ecca3;--coral:#e07b5a;--shadow:0 8px 32px rgba(0,0,0,.4);--shadow-sm:0 2px 8px rgba(0,0,0,.3);--radius:16px;--radius-sm:10px;--mono:'JetBrains Mono',Consolas,monospace;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--topbar-bg:rgba(10,10,10,.85)}
+[data-theme="light"]{--bg:#f0ede8;--bg2:#e8e4dd;--bg3:#ddd9d2;--card:rgba(255,255,255,.7);--card-border:rgba(0,0,0,.08);--card-hover:rgba(255,255,255,.85);--glass:rgba(255,255,255,.5);--glass-border:rgba(0,0,0,.06);--text:#1a1a1a;--text2:#666;--text3:#aaa;--accent:#8b6f3a;--accent2:#7a6030;--accent-glow:rgba(139,111,58,.1);--input-bg:rgba(255,255,255,.8);--input-border:rgba(0,0,0,.12);--input-focus:rgba(139,111,58,.25);--green:#0f6e56;--coral:#993c1d;--shadow:0 8px 32px rgba(0,0,0,.08);--shadow-sm:0 2px 8px rgba(0,0,0,.06);--topbar-bg:rgba(240,237,232,.9)}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden;transition:background .4s,color .4s;min-height:100vh}
+.bg-3d{position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(201,169,110,.06),transparent),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(201,169,110,.04),transparent),radial-gradient(ellipse 100% 100% at 50% 50%,rgba(30,30,30,.5),transparent)}
+[data-theme="light"] .bg-3d{background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(201,169,110,.08),transparent),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(139,111,58,.05),transparent)}
+.bg-grid{position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;opacity:.03;background-image:linear-gradient(rgba(201,169,110,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,.3) 1px,transparent 1px);background-size:60px 60px}
 [data-theme="light"] .bg-grid{opacity:.04}
- 
 .app{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 14px 60px}
- 
-/* ========== STICKY TOP ========== */
-.topbar{
-  position:sticky;top:0;z-index:90;
-  background:var(--topbar-bg);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--card-border);
-  padding:12px 16px;
-  display:flex;align-items:center;justify-content:space-between;
-  transition:background .4s;
-}
+.topbar{position:sticky;top:0;z-index:90;background:var(--topbar-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--card-border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;transition:background .4s}
 .topbar-brand{display:flex;align-items:center;gap:10px}
 .topbar-logo{font-family:var(--sans);font-weight:900;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .topbar-logo span{color:var(--text);font-weight:400}
@@ -96,300 +30,145 @@ body{
 .topbar-price{text-align:right}
 .topbar-price-val{font-size:22px;font-weight:800;color:var(--accent);font-family:var(--mono);letter-spacing:-.02em}
 .topbar-price-sub{font-size:9px;color:var(--text3);font-weight:500}
- 
-/* ========== THEME TOGGLE ========== */
-.theme-toggle{
-  position:fixed;top:70px;right:14px;z-index:91;
-  width:42px;height:42px;border-radius:50%;border:1px solid var(--card-border);
-  background:var(--card);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:var(--shadow-sm);transition:all .3s;
-  -webkit-appearance:none;appearance:none;color:var(--accent);font-size:18px;
-}
-.theme-toggle:active{transform:scale(.92)}
- 
-/* ========== HEADER SECTION ========== */
-.hero{
-  text-align:center;padding:28px 0 20px;
-}
+.ctrls{position:fixed;top:70px;right:14px;z-index:91;display:flex;flex-direction:column;gap:8px}
+.ctrl-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--card-border);background:var(--card);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);transition:all .3s;-webkit-appearance:none;appearance:none;color:var(--accent);font-size:18px;font-family:var(--sans);font-weight:800}
+.ctrl-btn:active{transform:scale(.92)}
+.ctrl-btn.lang{font-size:11px;letter-spacing:.02em}
+.hero{text-align:center;padding:28px 0 20px}
 .hero-brand{font-family:var(--sans);font-weight:900;font-size:28px;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
 .hero-brand em{font-style:normal;color:var(--accent)}
 .hero-tagline{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.2em;margin-top:4px;font-weight:500}
 .hero-title{font-size:14px;color:var(--text2);margin-top:10px;font-weight:400}
- 
-/* ========== PILLS ========== */
 .pills{display:flex;gap:8px;margin-bottom:16px}
-.pill{
-  flex:1;
-  background:var(--card);border:1px solid var(--card-border);
-  border-radius:var(--radius-sm);padding:10px 10px;text-align:center;
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  transition:all .3s;
-}
+.pill{flex:1;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:10px;text-align:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .3s}
 .pill b{display:block;font-size:8px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .pill em{display:block;font-size:17px;font-weight:800;font-style:normal;font-family:var(--mono);color:var(--text);margin-top:2px}
- 
-/* ========== CARDS (Glass) ========== */
-.card{
-  background:var(--card);
-  border:1px solid var(--card-border);
-  border-radius:var(--radius);
-  padding:18px;margin-bottom:14px;
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  box-shadow:var(--shadow);
-  transition:all .4s;
-}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:18px;margin-bottom:14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--shadow);transition:all .4s}
 .card:hover{background:var(--card-hover)}
-.card-t{
-  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
-  color:var(--accent);margin-bottom:12px;padding-bottom:8px;
-  border-bottom:1px solid var(--card-border);
-  display:flex;align-items:center;gap:8px;
-}
+.card-t{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--card-border);display:flex;align-items:center;gap:8px}
 .card-t svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:1.5}
- 
-/* ========== FORM ========== */
 .r{margin-bottom:10px}.r:last-child{margin-bottom:0}
 .r label{display:block;font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
-.r select,.r input[type=text],.r input[type=number]{
-  display:block;width:100%;font-size:16px;padding:12px 14px;
-  border:1px solid var(--input-border);border-radius:var(--radius-sm);
-  background:var(--input-bg);color:var(--text);
-  min-height:48px;-webkit-appearance:none;appearance:none;
-  font-family:var(--sans);font-weight:500;
-  transition:all .2s;
-}
-.r select{
-  padding-right:38px;cursor:pointer;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' fill='none' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 14px center;
-}
+.r select,.r input[type=text],.r input[type=number]{display:block;width:100%;font-size:16px;padding:12px 14px;border:1px solid var(--input-border);border-radius:var(--radius-sm);background:var(--input-bg);color:var(--text);min-height:48px;-webkit-appearance:none;appearance:none;font-family:var(--sans);font-weight:500;transition:all .2s}
+.r select{padding-right:38px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' fill='none' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .r select:focus,.r input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--input-focus),var(--shadow-sm)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:440px){.g2{grid-template-columns:1fr}}
- 
-/* ========== AUTOCOMPLETE ========== */
 .ac-wrap{position:relative}
-.ac-list{
-  position:absolute;left:0;right:0;top:100%;z-index:80;
-  background:var(--bg2);border:1px solid var(--card-border);border-top:none;
-  border-radius:0 0 var(--radius-sm) var(--radius-sm);
-  max-height:220px;overflow-y:auto;-webkit-overflow-scrolling:touch;
-  box-shadow:var(--shadow);display:none;
-}
+.ac-list{position:absolute;left:0;right:0;top:100%;z-index:80;background:var(--bg2);border:1px solid var(--card-border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);max-height:220px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:var(--shadow);display:none}
 .ac-item{padding:13px 14px;font-size:14px;line-height:1.4;border-bottom:1px solid var(--card-border);cursor:pointer;-webkit-user-select:none;user-select:none;transition:background .15s}
-.ac-item:last-child{border-bottom:none}
-.ac-item:active{background:var(--accent-glow)}
+.ac-item:last-child{border-bottom:none}.ac-item:active{background:var(--accent-glow)}
 .ac-load{padding:12px;font-size:12px;color:var(--text3);text-align:center}
- 
-/* ========== ROUTE BTN ========== */
-.route-btn{
-  display:block;width:100%;padding:14px;margin-top:10px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;border:none;border-radius:var(--radius-sm);
-  font-size:14px;font-weight:700;font-family:var(--sans);
-  cursor:pointer;text-align:center;text-transform:uppercase;letter-spacing:.08em;
-  min-height:48px;-webkit-appearance:none;appearance:none;
-  box-shadow:0 4px 16px rgba(201,169,110,.25);
-  transition:all .2s;
-}
-.route-btn:active{transform:scale(.98);box-shadow:0 2px 8px rgba(201,169,110,.2)}
-.route-btn:disabled{opacity:.5;cursor:default}
+.route-btn{display:block;width:100%;padding:14px;margin-top:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:700;font-family:var(--sans);cursor:pointer;text-align:center;text-transform:uppercase;letter-spacing:.08em;min-height:48px;-webkit-appearance:none;appearance:none;box-shadow:0 4px 16px rgba(201,169,110,.25);transition:all .2s}
+.route-btn:active{transform:scale(.98)}.route-btn:disabled{opacity:.5;cursor:default}
 .route-btn svg{vertical-align:middle;margin-right:6px}
- 
-.kmr{
-  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-  background:var(--glass);border:1px solid var(--glass-border);
-  border-radius:var(--radius-sm);padding:10px 14px;margin-top:10px;
-  transition:all .3s;
-}
+.kmr{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:10px 14px;margin-top:10px;transition:all .3s}
 .kmr b{font-size:18px;font-weight:800;font-family:var(--mono);color:var(--accent)}
-.kmr span{font-size:12px;color:var(--text2)}
-.kmr small{font-size:10px;color:var(--text3)}
-.kmr.ok{border-color:var(--green)}
- 
-/* ========== SLIDERS ========== */
+.kmr span{font-size:12px;color:var(--text2)}.kmr small{font-size:10px;color:var(--text3)}.kmr.ok{border-color:var(--green)}
 .sb{margin-top:14px}
 .sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .sh-l{font-size:9px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em}
 .sh-v{font-size:16px;font-weight:800;font-family:var(--mono);color:var(--accent)}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;padding:0}
 input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--input-border);border-radius:2px}
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none;width:28px;height:28px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  border:3px solid var(--bg2);margin-top:-12px;
-  box-shadow:0 2px 8px rgba(201,169,110,.3);
-}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));border:3px solid var(--bg2);margin-top:-12px;box-shadow:0 2px 8px rgba(201,169,110,.3)}
 input[type=range]::-moz-range-track{height:4px;background:var(--input-border);border-radius:2px;border:none}
-input[type=range]::-moz-range-thumb{
-  width:28px;height:28px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  border:3px solid var(--bg2);
-  box-shadow:0 2px 8px rgba(201,169,110,.3);
-}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));border:3px solid var(--bg2);box-shadow:0 2px 8px rgba(201,169,110,.3)}
 .sh-hint{font-size:9px;color:var(--text3);margin-top:4px}
- 
-/* ========== SCORES ========== */
 .sc{display:flex;align-items:center;gap:6px;padding:5px 0}
 .sc-n{font-size:11px;width:80px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sc-n.on{color:var(--text);font-weight:600}
-.sc-n.off{color:var(--text3)}
+.sc-n.on{color:var(--text);font-weight:600}.sc-n.off{color:var(--text3)}
 .sc-b{flex:1;height:4px;background:var(--input-border);border-radius:2px;position:relative;overflow:hidden}
 .sc-m{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--text3)}
 .sc-f{position:absolute;height:100%;border-radius:2px;transition:width .25s}
 .sc-v{font-size:10px;font-weight:700;width:46px;text-align:right;font-family:var(--mono);flex-shrink:0}
 .cp{color:var(--coral)}.cn{color:var(--green)}.cz{color:var(--text3)}
 .sc-tt{border-top:1px solid var(--card-border);margin-top:6px;padding-top:8px}
- 
-/* ========== KALKULATION ========== */
 .kl{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px solid var(--card-border)}
-.kl:last-child{border-bottom:none}
-.kl-k{color:var(--text2);font-weight:400}
-.kl-v{font-weight:700;font-family:var(--mono)}
+.kl:last-child{border-bottom:none}.kl-k{color:var(--text2);font-weight:400}.kl-v{font-weight:700;font-family:var(--mono)}
 .kt{display:flex;justify-content:space-between;padding:12px 0 4px;margin-top:6px;border-top:2px solid var(--accent)}
-.kt-k{font-size:15px;font-weight:800}
-.kt-v{font-size:18px;font-weight:800;font-family:var(--mono);color:var(--accent)}
- 
-/* ========== ENDPREIS BOX ========== */
-.ep{
-  text-align:center;margin-top:14px;padding:20px;
-  background:linear-gradient(135deg,rgba(201,169,110,.08),rgba(201,169,110,.02));
-  border:1px solid rgba(201,169,110,.15);
-  border-radius:var(--radius-sm);
-  position:relative;overflow:hidden;
-}
-.ep::before{
-  content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
-  background:radial-gradient(circle at 30% 30%,rgba(201,169,110,.06),transparent 60%);
-  pointer-events:none;
-}
+.kt-k{font-size:15px;font-weight:800}.kt-v{font-size:18px;font-weight:800;font-family:var(--mono);color:var(--accent)}
+.ep{text-align:center;margin-top:14px;padding:20px;background:linear-gradient(135deg,rgba(201,169,110,.08),rgba(201,169,110,.02));border:1px solid rgba(201,169,110,.15);border-radius:var(--radius-sm);position:relative;overflow:hidden}
+.ep::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(201,169,110,.06),transparent 60%);pointer-events:none}
 .ep b{display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);position:relative}
 .ep em{display:block;font-size:32px;font-weight:900;font-family:var(--mono);color:var(--accent);font-style:normal;margin:6px 0;letter-spacing:-.02em;position:relative}
 .ep span{font-size:11px;color:var(--text3);position:relative}
- 
-/* ========== INFO / PREISLISTE ========== */
-.ib{
-  background:var(--glass);border:1px solid var(--glass-border);
-  border-radius:var(--radius-sm);padding:14px;margin-bottom:14px;
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-}
+.ib{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:14px;margin-bottom:14px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .ib h3{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px}
-.ib-r{font-size:12px;margin-bottom:4px;display:flex;gap:6px}
-.ib-r b{color:var(--text);font-weight:600;flex-shrink:0}
-.ib-r span{color:var(--text3)}
- 
+.ib-r{font-size:12px;margin-bottom:4px;display:flex;gap:6px}.ib-r b{color:var(--text);font-weight:600;flex-shrink:0}.ib-r span{color:var(--text3)}
 .pw{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
 @media(max-width:500px){.pw{grid-template-columns:1fr}}
 .pc{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:12px}
 .pc h4{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:6px}
-.pr{display:flex;justify-content:space-between;font-size:11px;padding:2px 0}
-.pr .n{color:var(--text2)}.pr .p{font-weight:700;font-family:var(--mono);color:var(--text)}
- 
+.pr{display:flex;justify-content:space-between;font-size:11px;padding:2px 0}.pr .n{color:var(--text2)}.pr .p{font-weight:700;font-family:var(--mono);color:var(--text)}
 .footer{text-align:center;padding:20px 0 8px;font-size:9px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase}
-.footer a{color:var(--accent);text-decoration:none}
- 
-/* ========== RESPONSIVE ========== */
-@media(max-width:440px){
-  .hero-brand{font-size:22px;letter-spacing:.1em}
-  .topbar-logo{font-size:12px}
-  .ep em{font-size:26px}
-}
+@media(max-width:440px){.hero-brand{font-size:22px;letter-spacing:.1em}.topbar-logo{font-size:12px}.ep em{font-size:26px}}
 </style>
 </head>
 <body data-theme="dark">
- 
 <div class="bg-3d"></div>
 <div class="bg-grid"></div>
- 
 <div class="topbar">
-  <div class="topbar-brand">
-    <div>
-      <div class="topbar-logo">HEY<span>DRIVER</span></div>
-      <div class="topbar-sub">Transfer Kalkulation</div>
-    </div>
-  </div>
-  <div class="topbar-price">
-    <div class="topbar-price-val" id="tp">&#8364;0,00</div>
-    <div class="topbar-price-sub" id="ts">inkl. MwSt.</div>
-  </div>
+  <div class="topbar-brand"><div><div class="topbar-logo">HEY<span>DRIVER</span></div><div class="topbar-sub" data-t="topSub">Transfer Kalkulation</div></div></div>
+  <div class="topbar-price"><div class="topbar-price-val" id="tp">&#8364;0,00</div><div class="topbar-price-sub" id="ts">inkl. MwSt.</div></div>
 </div>
- 
-<button class="theme-toggle" id="themeBtn" type="button" aria-label="Theme wechseln">&#9788;</button>
- 
+<div class="ctrls">
+  <button class="ctrl-btn" id="themeBtn" type="button">&#9788;</button>
+  <button class="ctrl-btn lang" id="langBtn" type="button">EN</button>
+</div>
 <div class="app">
+<div class="hero"><div class="hero-brand">HEY<em>DRIVER</em></div><div class="hero-tagline">Limousine &amp; Chauffeur Service</div><div class="hero-title">Engineered Journeys. Tailored Experience.</div></div>
+<div class="pills"><div class="pill"><b data-t="pillParam">Parameter</b><em id="pC">0/9</em></div><div class="pill" id="zP"><b data-t="pillSurcharge">Zuschlag</b><em id="zV">+0,0%</em></div></div>
  
-<div class="hero">
-  <div class="hero-brand">HEY<em>DRIVER</em></div>
-  <div class="hero-tagline">Limousine &amp; Chauffeur Service</div>
-  <div class="hero-title">Engineered Journeys. Tailored Experience.</div>
-</div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg><span data-t="secRoute">Route</span></div>
+<div class="r ac-wrap"><label data-t="lblOrigin">Startort (Origin)</label><input type="text" id="iO" data-ph="phOrigin" placeholder="z.B. Flughafen M&#252;nchen" autocomplete="off" autocorrect="off" spellcheck="false"><div class="ac-list" id="acO"></div></div>
+<div class="r ac-wrap"><label data-t="lblDest">Zielort (Destination)</label><input type="text" id="iD" data-ph="phDest" placeholder="z.B. Marienplatz M&#252;nchen" autocomplete="off" autocorrect="off" spellcheck="false"><div class="ac-list" id="acD"></div></div>
+<button class="route-btn" id="rbtn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-t="btnRoute">Route berechnen</span></button>
+<div class="kmr" id="kmBox"><span data-t="lblDistance">Entfernung:</span><b id="kV">&#8211;</b><small id="kS"></small></div>
+<div class="r" style="margin-top:10px"><label data-t="lblKmManual">Km manuell / korrigieren</label><input type="number" id="iK" data-ph="phKm" placeholder="z.B. 42" inputmode="decimal" style="max-width:160px"></div></div>
  
-<div class="pills">
-  <div class="pill"><b>Parameter</b><em id="pC">0/9</em></div>
-  <div class="pill" id="zP"><b>Zuschlag</b><em id="zV">+0,0%</em></div>
-</div>
- 
-<!-- ROUTE -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>Route</div>
-  <div class="r ac-wrap"><label>Startort (Origin)</label><input type="text" id="iO" placeholder="z.B. Flughafen M&#252;nchen" autocomplete="off" autocorrect="off" spellcheck="false"><div class="ac-list" id="acO"></div></div>
-  <div class="r ac-wrap"><label>Zielort (Destination)</label><input type="text" id="iD" placeholder="z.B. Marienplatz M&#252;nchen" autocomplete="off" autocorrect="off" spellcheck="false"><div class="ac-list" id="acD"></div></div>
-  <button class="route-btn" id="rbtn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Route berechnen</button>
-  <div class="kmr" id="kmBox"><span>Entfernung:</span><b id="kV">&#8211;</b><small id="kS"></small></div>
-  <div class="r" style="margin-top:10px"><label>Km manuell / korrigieren</label><input type="number" id="iK" placeholder="z.B. 42" inputmode="decimal" style="max-width:160px"></div>
-</div>
- 
-<!-- PARAMETER -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M12 3v18m-7-7h14M9 3h6M7 21h10"/></svg>Buchungsparameter</div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M12 3v18m-7-7h14M9 3h6M7 21h10"/></svg><span data-t="secParams">Buchungsparameter</span></div>
 <div class="g2">
-<div class="r"><label>Anfrage durch</label><select id="s0"><option value="">- ausw&#228;hlen -</option><option value="0">Kunde (Gesch&#228;ftlich)</option><option value="1">Kunde (Privat)</option><option value="2">Partner (Agentur)</option><option value="3">Partner (Concierge)</option><option value="4">Assistant</option><option value="5">Partner (Kollege)</option></select></div>
-<div class="r"><label>Herkunftsland</label><select id="s1"><option value="">- ausw&#228;hlen -</option><option value="0">DACH / Golf / West-EU</option><option value="1">USA / UK / CH / Skand.</option><option value="2">Dritte Welt / Ost-EU</option></select></div>
-<div class="r"><label>Dringlichkeit</label><select id="s2"><option value="">- ausw&#228;hlen -</option><option value="0">Sofort (10-30 min)</option><option value="1">Keine Verf&#252;gbarkeit</option><option value="2">Knappe Kapa (Event)</option><option value="3">Kurzfr. Umplanung</option><option value="4">Normal</option></select></div>
-<div class="r"><label>Zweck / Saison</label><select id="s3"><option value="">- ausw&#228;hlen -</option><option value="0">Sicherheitskonferenz</option><option value="1">Festivals (Oktoberfest)</option><option value="2">Messe</option><option value="3">Sport / Fu&#223;ball</option><option value="4">Konzerte</option><option value="5">Standard</option></select></div>
-<div class="r"><label>Planung</label><select id="s4"><option value="">- ausw&#228;hlen -</option><option value="0">Kurzfristig (1-24h)</option><option value="1">Mittelfristig</option><option value="2">Langfristig (ab 1 Wo.)</option></select></div>
-<div class="r"><label>Extras</label><select id="s5"><option value="">- ausw&#228;hlen -</option><option value="0">Guide + Betreuung</option><option value="1">Blumen, Getr&#228;nke</option><option value="2">Engl. Fahrer + Anzug</option><option value="3">Ski-Gep&#228;ck</option><option value="4">Kindersitze</option><option value="5">Keine</option><option value="6">Maut</option></select></div>
-<div class="r"><label>Zusammenarbeit</label><select id="s6"><option value="">- ausw&#228;hlen -</option><option value="0">Kurzfristig</option><option value="1">Mittelfristig</option><option value="2">Langfristig</option></select></div>
-<div class="r"><label>Buchungen</label><select id="s7"><option value="">- ausw&#228;hlen -</option><option value="0">1 (nur Hin)</option><option value="1">2 (Hin + Zur&#252;ck)</option><option value="2">ab 3</option></select></div>
-<div class="r"><label>Kapa-Auslastung</label><select id="s8"><option value="">- ausw&#228;hlen -</option><option value="0">Eigene Flotte</option><option value="1">Externer Partner</option></select></div>
+<div class="r"><label data-t="lblS0">Anfrage durch</label><select id="s0"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Kunde (Gesch&#228;ftlich)" data-en="Client (Business)">Kunde (Gesch&#228;ftlich)</option><option value="1" data-de="Kunde (Privat)" data-en="Client (Private)">Kunde (Privat)</option><option value="2" data-de="Partner (Agentur)" data-en="Partner (Agency)">Partner (Agentur)</option><option value="3" data-de="Partner (Concierge)" data-en="Partner (Concierge)">Partner (Concierge)</option><option value="4" data-de="Assistant" data-en="Assistant">Assistant</option><option value="5" data-de="Partner (Kollege)" data-en="Partner (Colleague)">Partner (Kollege)</option></select></div>
+<div class="r"><label data-t="lblS1">Herkunftsland</label><select id="s1"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="DACH / Golf / West-EU" data-en="DACH / Gulf / Western EU">DACH / Golf / West-EU</option><option value="1" data-de="USA / UK / CH / Skand." data-en="USA / UK / CH / Scand.">USA / UK / CH / Skand.</option><option value="2" data-de="Dritte Welt / Ost-EU" data-en="Developing / Eastern EU">Dritte Welt / Ost-EU</option></select></div>
+<div class="r"><label data-t="lblS2">Dringlichkeit</label><select id="s2"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Sofort (10-30 min)" data-en="Immediate (10-30 min)">Sofort (10-30 min)</option><option value="1" data-de="Keine Verf&#252;gbarkeit" data-en="No availability nearby">Keine Verf&#252;gbarkeit</option><option value="2" data-de="Knappe Kapa (Event)" data-en="Scarce capacity (Event)">Knappe Kapa (Event)</option><option value="3" data-de="Kurzfr. Umplanung" data-en="Short-notice reschedule">Kurzfr. Umplanung</option><option value="4" data-de="Normal" data-en="Normal">Normal</option></select></div>
+<div class="r"><label data-t="lblS3">Zweck / Saison</label><select id="s3"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Sicherheitskonferenz" data-en="Security Conference">Sicherheitskonferenz</option><option value="1" data-de="Festivals (Oktoberfest)" data-en="Festivals (Oktoberfest)">Festivals (Oktoberfest)</option><option value="2" data-de="Messe" data-en="Trade Fair">Messe</option><option value="3" data-de="Sport / Fu&#223;ball" data-en="Sports / Football">Sport / Fu&#223;ball</option><option value="4" data-de="Konzerte" data-en="Concerts">Konzerte</option><option value="5" data-de="Standard" data-en="Standard">Standard</option></select></div>
+<div class="r"><label data-t="lblS4">Planung</label><select id="s4"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Kurzfristig (1-24h)" data-en="Short-term (1-24h)">Kurzfristig (1-24h)</option><option value="1" data-de="Mittelfristig" data-en="Medium-term">Mittelfristig</option><option value="2" data-de="Langfristig (ab 1 Wo.)" data-en="Long-term (1+ week)">Langfristig (ab 1 Wo.)</option></select></div>
+<div class="r"><label data-t="lblS5">Extras</label><select id="s5"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Guide + Betreuung" data-en="Guide + Assistance">Guide + Betreuung</option><option value="1" data-de="Blumen, Getr&#228;nke" data-en="Flowers, Beverages">Blumen, Getr&#228;nke</option><option value="2" data-de="Engl. Fahrer + Anzug" data-en="English driver + Suit">Engl. Fahrer + Anzug</option><option value="3" data-de="Ski-Gep&#228;ck" data-en="Ski Luggage">Ski-Gep&#228;ck</option><option value="4" data-de="Kindersitze" data-en="Child Seats">Kindersitze</option><option value="5" data-de="Keine" data-en="None">Keine</option><option value="6" data-de="Maut" data-en="Toll">Maut</option></select></div>
+<div class="r"><label data-t="lblS6">Zusammenarbeit</label><select id="s6"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Kurzfristig" data-en="Short-term">Kurzfristig</option><option value="1" data-de="Mittelfristig" data-en="Medium-term">Mittelfristig</option><option value="2" data-de="Langfristig" data-en="Long-term">Langfristig</option></select></div>
+<div class="r"><label data-t="lblS7">Buchungen</label><select id="s7"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="1 (nur Hin)" data-en="1 (one-way)">1 (nur Hin)</option><option value="1" data-de="2 (Hin + Zur&#252;ck)" data-en="2 (round-trip)">2 (Hin + Zur&#252;ck)</option><option value="2" data-de="ab 3" data-en="3+">ab 3</option></select></div>
+<div class="r"><label data-t="lblS8">Kapa-Auslastung</label><select id="s8"><option value="" data-de="- ausw&#228;hlen -" data-en="- select -">- ausw&#228;hlen -</option><option value="0" data-de="Eigene Flotte" data-en="Own Fleet">Eigene Flotte</option><option value="1" data-de="Externer Partner" data-en="External Partner">Externer Partner</option></select></div>
 </div></div>
  
-<!-- TRANSFER -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/></svg>Transferdetails</div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/></svg><span data-t="secTransfer">Transferdetails</span></div>
 <div class="g2">
-<div class="r"><label>Transfertyp</label><select id="sT"><option value="ptp">Point-to-Point</option><option value="km">Strecke (km)</option><option value="hourly">Stundenbuchung</option></select></div>
-<div class="r"><label>Fahrzeugklasse</label><select id="sV"><option value="standard">Standard</option><option value="business" selected>Business</option><option value="first">First Class</option><option value="van">Business Van</option></select></div>
+<div class="r"><label data-t="lblTT">Transfertyp</label><select id="sT"><option value="ptp" data-de="Point-to-Point" data-en="Point-to-Point">Point-to-Point</option><option value="km" data-de="Strecke (km)" data-en="Distance (km)">Strecke (km)</option><option value="hourly" data-de="Stundenbuchung" data-en="Hourly Booking">Stundenbuchung</option></select></div>
+<div class="r"><label data-t="lblVC">Fahrzeugklasse</label><select id="sV"><option value="standard" data-de="Standard" data-en="Standard">Standard</option><option value="business" selected data-de="Business" data-en="Business">Business</option><option value="first" data-de="First Class" data-en="First Class">First Class</option><option value="van" data-de="Business Van" data-en="Business Van">Business Van</option></select></div>
 </div>
-<div class="sb" id="bH" style="display:none"><div class="sh"><span class="sh-l">Dauer</span><span class="sh-v" id="vH">3 h</span></div><input type="range" id="rH" min="1" max="12" step="1" value="3"></div>
-<div class="sb"><div class="sh"><span class="sh-l">Extra Wartezeit</span><span class="sh-v" id="vW">0 min</span></div><input type="range" id="rW" min="0" max="8" step="1" value="0"><div class="sh-hint">Je 15 min = &#8364;25 (Freizeit: 60 min Flughafen / 15 min sonst)</div></div>
-</div>
+<div class="sb" id="bH" style="display:none"><div class="sh"><span class="sh-l" data-t="lblDuration">Dauer</span><span class="sh-v" id="vH">3 h</span></div><input type="range" id="rH" min="1" max="12" step="1" value="3"></div>
+<div class="sb"><div class="sh"><span class="sh-l" data-t="lblWait">Extra Wartezeit</span><span class="sh-v" id="vW">0 min</span></div><input type="range" id="rW" min="0" max="8" step="1" value="0"><div class="sh-hint" data-t="hintWait">Je 15 min = &#8364;25 (Freizeit: 60 min Flughafen / 15 min sonst)</div></div></div>
  
-<!-- SCORE -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg>Score-Auswertung</div><div id="sA"></div></div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg><span data-t="secScore">Score-Auswertung</span></div><div id="sA"></div></div>
  
-<!-- KALKULATION -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6m-6 3h4m-4 3h6"/></svg>Kalkulation</div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6m-6 3h4m-4 3h6"/></svg><span data-t="secCalc">Kalkulation</span></div>
 <div id="rI" style="font-size:12px;color:var(--text3);margin-bottom:8px;display:none"></div>
-<div class="kl"><span class="kl-k">Basispreis (netto)</span><span class="kl-v" id="cB">&#8364;0,00</span></div>
+<div class="kl"><span class="kl-k" data-t="calcBase">Basispreis (netto)</span><span class="kl-v" id="cB">&#8364;0,00</span></div>
 <div class="kl"><span class="kl-k" id="cZL">Zuschlag</span><span class="kl-v" id="cZ">&#8364;0,00</span></div>
 <div class="kl"><span class="kl-k" id="cWL">Wartezeit</span><span class="kl-v" id="cW">&#8364;0,00</span></div>
-<div class="kt"><span class="kt-k">Netto</span><span class="kt-v" id="cN">&#8364;0,00</span></div>
-<div class="ep"><b>Endpreis brutto</b><em id="cE">&#8364;0,00</em><span id="cM">inkl. 19% MwSt.</span></div>
-</div>
+<div class="kt"><span class="kt-k" data-t="calcNetto">Netto</span><span class="kt-v" id="cN">&#8364;0,00</span></div>
+<div class="ep"><b data-t="calcTotal">Endpreis brutto</b><em id="cE">&#8364;0,00</em><span id="cM">inkl. 19% MwSt.</span></div></div>
  
-<!-- PREISLISTE -->
-<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Preisliste</div>
+<div class="card"><div class="card-t"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span data-t="secPrices">Preisliste</span></div>
 <div class="pw">
 <div class="pc"><h4>Point-to-Point</h4><div class="pr"><span class="n">Business</span><span class="p">&#8364;125</span></div><div class="pr"><span class="n">First</span><span class="p">&#8364;145</span></div><div class="pr"><span class="n">Van</span><span class="p">&#8364;135</span></div></div>
-<div class="pc"><h4>Strecke</h4><div class="pr"><span class="n">Standard</span><span class="p">&#8364;2,50/km</span></div><div class="pr"><span class="n">Business</span><span class="p">&#8364;2,70/km</span></div><div class="pr"><span class="n">First</span><span class="p">&#8364;2,80/km</span></div><div class="pr"><span class="n">Van</span><span class="p">&#8364;2,70/km</span></div></div>
-<div class="pc"><h4>Stunde</h4><div class="pr"><span class="n">Business</span><span class="p">&#8364;85/h</span></div><div class="pr"><span class="n">First</span><span class="p">&#8364;110/h</span></div><div class="pr"><span class="n">Van</span><span class="p">&#8364;100/h</span></div></div>
-</div></div>
+<div class="pc"><h4 data-t="plDistance">Strecke</h4><div class="pr"><span class="n">Standard</span><span class="p">&#8364;2,50/km</span></div><div class="pr"><span class="n">Business</span><span class="p">&#8364;2,70/km</span></div><div class="pr"><span class="n">First</span><span class="p">&#8364;2,80/km</span></div><div class="pr"><span class="n">Van</span><span class="p">&#8364;2,70/km</span></div></div>
+<div class="pc"><h4 data-t="plHourly">Stunde</h4><div class="pr"><span class="n">Business</span><span class="p">&#8364;85/h</span></div><div class="pr"><span class="n">First</span><span class="p">&#8364;110/h</span></div><div class="pr"><span class="n">Van</span><span class="p">&#8364;100/h</span></div></div></div></div>
  
-<div class="ib"><h3>Inklusivleistungen</h3>
-<div class="ib-r"><b>Meet &amp; Greet</b><span>Namensschild am Ankunftsbereich</span></div>
-<div class="ib-r"><b>Wartezeit</b><span>60 min Flughafen / 15 min sonst</span></div>
-<div class="ib-r"><b>Flug&#252;berwachung</b><span>Echtzeit-Tracking</span></div>
-<div class="ib-r"><b>Koordination</b><span>Dispatcher-&#220;berwachung</span></div>
-</div>
+<div class="ib"><h3 data-t="secIncl">Inklusivleistungen</h3>
+<div class="ib-r"><b>Meet &amp; Greet</b><span data-t="inclMG">Namensschild am Ankunftsbereich</span></div>
+<div class="ib-r"><b data-t="inclWaitT">Wartezeit</b><span data-t="inclWaitD">60 min Flughafen / 15 min sonst</span></div>
+<div class="ib-r"><b data-t="inclFlightT">Flug&#252;berwachung</b><span data-t="inclFlightD">Echtzeit-Tracking</span></div>
+<div class="ib-r"><b data-t="inclCoordT">Koordination</b><span data-t="inclCoordD">Dispatcher-&#220;berwachung</span></div></div>
  
 <div class="footer">&#169; HeyDriver &#183; Engineered Journeys. Tailored Experience.</div>
 </div>
@@ -397,182 +176,112 @@ input[type=range]::-moz-range-thumb{
 <script>
 (function(){
 "use strict";
- 
-/* === THEME TOGGLE === */
+var T={de:{topSub:"Transfer Kalkulation",pillParam:"Parameter",pillSurcharge:"Zuschlag",secRoute:"Route",lblOrigin:"Startort (Origin)",lblDest:"Zielort (Destination)",phOrigin:"z.B. Flughafen M\u00fcnchen",phDest:"z.B. Marienplatz M\u00fcnchen",btnRoute:"Route berechnen",lblDistance:"Entfernung:",lblKmManual:"Km manuell / korrigieren",phKm:"z.B. 42",secParams:"Buchungsparameter",lblS0:"Anfrage durch",lblS1:"Herkunftsland",lblS2:"Dringlichkeit",lblS3:"Zweck / Saison",lblS4:"Planung",lblS5:"Extras",lblS6:"Zusammenarbeit",lblS7:"Buchungen",lblS8:"Kapa-Auslastung",secTransfer:"Transferdetails",lblTT:"Transfertyp",lblVC:"Fahrzeugklasse",lblDuration:"Dauer",lblWait:"Extra Wartezeit",hintWait:"Je 15 min = \u20ac25 (Freizeit: 60 min Flughafen / 15 min sonst)",secScore:"Score-Auswertung",secCalc:"Kalkulation",calcBase:"Basispreis (netto)",calcNetto:"Netto",calcTotal:"Endpreis brutto",secPrices:"Preisliste",plDistance:"Strecke",plHourly:"Stunde",secIncl:"Inklusivleistungen",inclMG:"Namensschild am Ankunftsbereich",inclWaitT:"Wartezeit",inclWaitD:"60 min Flughafen / 15 min sonst",inclFlightT:"Flug\u00fcberwachung",inclFlightD:"Echtzeit-Tracking",inclCoordT:"Koordination",inclCoordD:"Dispatcher-\u00dcberwachung",NM:["Anfrage","Herkunft","Dringl.","Zweck","Planung","Extras","Zusamm.","Buchungen","Kapa"],total:"Gesamt",surcharge:"Zuschlag",waitTime:"Wartezeit",inclVat:"inkl. 19% MwSt.",calc_ing:"Berechne...",rDrive:"(Fahrtstrecke)",rAir:"(ca. Luftlinie)",rManual:"(manuell)",rBoth:"Bitte beide Orte",searching:"Suche...",noRes:"Keine Ergebnisse",noConn:"Keine Verbindung",ldErr:"Fehler",tmout:"Timeout",netErr:"Netzwerkfehler"},
+en:{topSub:"Transfer Calculator",pillParam:"Parameters",pillSurcharge:"Surcharge",secRoute:"Route",lblOrigin:"Origin",lblDest:"Destination",phOrigin:"e.g. Munich Airport",phDest:"e.g. Marienplatz Munich",btnRoute:"Calculate route",lblDistance:"Distance:",lblKmManual:"Km manual / adjust",phKm:"e.g. 42",secParams:"Booking Parameters",lblS0:"Requested by",lblS1:"Country of origin",lblS2:"Urgency",lblS3:"Purpose / Season",lblS4:"Planning",lblS5:"Extras",lblS6:"Cooperation",lblS7:"Bookings",lblS8:"Capacity utilization",secTransfer:"Transfer Details",lblTT:"Transfer type",lblVC:"Vehicle class",lblDuration:"Duration",lblWait:"Extra waiting time",hintWait:"Per 15 min = \u20ac25 (free: 60 min airport / 15 min other)",secScore:"Score Overview",secCalc:"Calculation",calcBase:"Base price (net)",calcNetto:"Net",calcTotal:"Total price (gross)",secPrices:"Price List",plDistance:"Distance",plHourly:"Hourly",secIncl:"Included Services",inclMG:"Name sign at arrival area",inclWaitT:"Waiting time",inclWaitD:"60 min airport / 15 min other",inclFlightT:"Flight monitoring",inclFlightD:"Real-time tracking",inclCoordT:"Coordination",inclCoordD:"Dispatcher monitoring",NM:["Request","Origin","Urgency","Purpose","Planning","Extras","Cooperat.","Bookings","Capacity"],total:"Total",surcharge:"Surcharge",waitTime:"Waiting time",inclVat:"incl. 19% VAT",calc_ing:"Calculating...",rDrive:"(driving distance)",rAir:"(approx. air distance)",rManual:"(manual)",rBoth:"Please enter both locations",searching:"Searching...",noRes:"No results",noConn:"No connection",ldErr:"Error",tmout:"Timeout",netErr:"Network error"}};
+var lang=localStorage.getItem("hd-lang")||"de";
+function L(){return T[lang]}
+function setLang(l){
+  lang=l;localStorage.setItem("hd-lang",l);document.documentElement.lang=l;
+  var t=L(),els=document.querySelectorAll("[data-t]");
+  for(var i=0;i<els.length;i++){var k=els[i].getAttribute("data-t");if(t[k])els[i].textContent=t[k]}
+  var phs=document.querySelectorAll("[data-ph]");
+  for(var j=0;j<phs.length;j++){var pk=phs[j].getAttribute("data-ph");if(t[pk])phs[j].placeholder=t[pk]}
+  var opts=document.querySelectorAll("select option");
+  for(var m=0;m<opts.length;m++){var o=opts[m],x=o.getAttribute("data-"+l);if(x)o.textContent=x}
+  var lb=document.getElementById("langBtn");if(lb)lb.textContent=l==="de"?"EN":"DE";
+  calc();
+}
 var theme=localStorage.getItem("hd-theme")||"dark";
 document.body.setAttribute("data-theme",theme);
 var tBtn=document.getElementById("themeBtn");
-function updThemeIcon(){tBtn.textContent=document.body.getAttribute("data-theme")==="dark"?"\u2600":"\u263E"}
-updThemeIcon();
-tBtn.addEventListener("click",function(){
-  var cur=document.body.getAttribute("data-theme");
-  var nxt=cur==="dark"?"light":"dark";
-  document.body.setAttribute("data-theme",nxt);
-  localStorage.setItem("hd-theme",nxt);
-  updThemeIcon();
-});
+function uTI(){tBtn.textContent=document.body.getAttribute("data-theme")==="dark"?"\u2600":"\u263E"}
+uTI();
+tBtn.addEventListener("click",function(){var n=document.body.getAttribute("data-theme")==="dark"?"light":"dark";document.body.setAttribute("data-theme",n);localStorage.setItem("hd-theme",n);uTI();calc()});
+document.getElementById("langBtn").addEventListener("click",function(){setLang(lang==="de"?"en":"de")});
  
-/* === IDENTICAL CALCULATION LOGIC (unchanged) === */
 var S=[[0,0,-.05,-.03,0,-.08],[0,.05,-.05],[.25,.2,.15,.1,0],[.15,.12,.1,.08,.05,0],[.1,0,-.05],[.12,.1,.08,.05,.03,0,.06],[.05,0,-.05],[0,-.03,-.05],[0,.08]];
-var NM=["Anfrage","Herkunft","Dringl.","Zweck","Planung","Extras","Zusamm.","Buchungen","Kapa"];
 var PP={standard:125,business:125,first:145,van:135};
 var KR={standard:2.5,business:2.7,first:2.8,van:2.7};
 var KN={standard:95,business:110,first:130,van:120};
 var HH={standard:85,business:85,first:110,van:100};
-var curKm=0;
-var oriCoord=null,dstCoord=null,oriName="",dstName="";
+var curKm=0,oriCoord=null,dstCoord=null,oriName="",dstName="";
  
 function g(id){return document.getElementById(id)}
 function tx(id,t){var e=g(id);if(e)e.textContent=String(t)}
 function st(id,p,v){var e=g(id);if(e)e.style[p]=v}
 function vl(id){var e=g(id);return e?e.value:""}
+function fm(n){if(typeof n!=="number"||isNaN(n))n=0;var neg=n<0;var x=Math.abs(Math.round(n*100));var c=String(x%100);if(c.length<2)c="0"+c;var e=String(Math.floor(x/100));var p=[];for(var i=e.length;i>0;i-=3){p.unshift(e.substring(Math.max(0,i-3),i))}return(neg?"-":"")+"\u20ac"+p.join(".")+","+c}
+function fp(n){if(typeof n!=="number"||isNaN(n))n=0;return(n>=0?"+":"")+((Math.round(n*1000)/10).toFixed(1))+"%"}
  
-function fm(n){
-  if(typeof n!=="number"||isNaN(n))n=0;
-  var neg=n<0;var x=Math.abs(Math.round(n*100));
-  var cents=String(x%100);if(cents.length<2)cents="0"+cents;
-  var eur=String(Math.floor(x/100));var parts=[];
-  for(var i=eur.length;i>0;i-=3){parts.unshift(eur.substring(Math.max(0,i-3),i))}
-  return(neg?"-":"")+"\u20ac"+parts.join(".")+","+cents;
+function calc(){try{
+  var t=L(),NM=t.NM,tot=0,cnt=0,rows=[];
+  for(var i=0;i<9;i++){var sel=g("s"+i);var v=sel?sel.value:"";var on=v!=="";var sc=0;
+  if(on){var idx=parseInt(v,10);if(!isNaN(idx)&&S[i]&&idx>=0&&idx<S[i].length)sc=S[i][idx]}
+  tot+=sc;if(on)cnt++;rows.push({n:NM[i],s:sc,on:on})}
+  tx("pC",cnt+"/9");tx("zV",fp(tot));
+  var dk=document.body.getAttribute("data-theme")==="dark",cC=dk?"#e07b5a":"#993c1d",gC=dk?"#4ecca3":"#0f6e56";
+  st("zV","color",tot>0?cC:tot<0?gC:"");
+  var zp=g("zP");if(zp)zp.style.borderColor=tot>0?"rgba(224,123,90,.3)":tot<0?"rgba(78,204,163,.3)":"";
+  var h="";
+  for(var j=0;j<rows.length;j++){var rr=rows[j],w=Math.min(Math.abs(rr.s)/0.3,1)*50;var cc=rr.s>0?"cp":rr.s<0?"cn":"cz";var bs="";
+  if(rr.s>0)bs="left:50%;width:"+w+"%;background:"+cC;else if(rr.s<0)bs="right:50%;width:"+w+"%;background:"+gC;
+  h+="<div class='sc'><span class='sc-n "+(rr.on?"on":"off")+"'>"+rr.n+"</span><div style='flex:1;display:flex;align-items:center;gap:5px'><div class='sc-b'><div class='sc-m'></div>"+(bs?"<div class='sc-f' style='"+bs+"'></div>":"")+"</div><span class='sc-v "+cc+"'>"+fp(rr.s)+"</span></div></div>"}
+  var tw=Math.min(Math.abs(tot)/0.5,1)*50,tc=tot>0?"cp":tot<0?"cn":"cz",tb="";
+  if(tot>0)tb="left:50%;width:"+tw+"%;background:"+cC;else if(tot<0)tb="right:50%;width:"+tw+"%;background:"+gC;
+  h+="<div class='sc sc-tt'><span class='sc-n on' style='font-weight:800'>"+t.total+"</span><div style='flex:1;display:flex;align-items:center;gap:5px'><div class='sc-b'><div class='sc-m'></div>"+(tb?"<div class='sc-f' style='"+tb+"'></div>":"")+"</div><span class='sc-v "+tc+"' style='font-weight:800'>"+fp(tot)+"</span></div></div>";
+  var sa=g("sA");if(sa)sa.innerHTML=h;
+  var tt=vl("sT"),vc=vl("sV");
+  var hrs=parseInt(vl("rH"),10);if(isNaN(hrs))hrs=3;
+  var wait=parseInt(vl("rW"),10);if(isNaN(wait))wait=0;
+  tx("vH",hrs+" h");tx("vW",(wait*15)+" min");st("bH","display",tt==="hourly"?"block":"none");
+  var base=0;
+  if(tt==="ptp")base=(PP[vc]||125)/1.19;else if(tt==="km")base=Math.max((KN[vc]||95),curKm*(KR[vc]||2.5))/1.19;else base=(hrs*(HH[vc]||85))/1.19;
+  var zu=base*tot,wa=wait*25/1.19,ne=base+zu+wa,mw=ne*0.19,br=ne+mw;
+  tx("tp",fm(br));tx("ts","netto "+fm(ne));tx("cB",fm(base));
+  tx("cZL",t.surcharge+" ("+fp(tot)+")");tx("cZ",fm(zu));st("cZ","color",zu>0?cC:zu<0?gC:"");
+  tx("cWL",t.waitTime+" ("+wait+"\u00d715 min)");tx("cW",fm(wa));
+  tx("cN",fm(ne));tx("cE",fm(br));tx("cM",t.inclVat+" ("+fm(mw)+")");
+  if(oriName&&dstName){tx("rI",oriName+" \u2192 "+dstName+" ("+curKm+" km)");st("rI","display","block")}else{st("rI","display","none")}
+}catch(err){}}
+ 
+var acTimer={O:null,D:null},acData={O:null,D:null};
+function setupAC(key,iid,lid){var inp=g(iid),list=g(lid);if(!inp||!list)return;
+inp.addEventListener("input",function(){clearTimeout(acTimer[key]);var q=inp.value.trim();if(q.length<3){list.style.display="none";return}list.innerHTML="<div class='ac-load'>"+L().searching+"</div>";list.style.display="block";acTimer[key]=setTimeout(function(){sPlace(key,q,list)},500)});
+inp.addEventListener("focus",function(){if(acData[key]&&acData[key].length)list.style.display="block"})}
+function sPlace(key,q,list){
+var url="https://nominatim.openstreetmap.org/search?format=json&q="+encodeURIComponent(q)+"&countrycodes=de,at,ch&limit=5&addressdetails=1";
+if(typeof fetch==="function"){
+fetch(url,{method:"GET",headers:{"Accept":"application/json"}}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){acData[key]=d;rAC(key,d,list)}).catch(function(){
+var x=new XMLHttpRequest();x.open("GET",url,true);x.timeout=8000;x.onreadystatechange=function(){if(x.readyState!==4)return;if(x.status===200){try{acData[key]=JSON.parse(x.responseText);rAC(key,acData[key],list)}catch(e){list.innerHTML="<div class='ac-load'>"+L().ldErr+"</div>"}}else{list.innerHTML="<div class='ac-load'>"+L().noConn+" ("+x.status+")</div>"}};x.ontimeout=function(){list.innerHTML="<div class='ac-load'>"+L().tmout+"</div>"};x.onerror=function(){list.innerHTML="<div class='ac-load'>"+L().netErr+"</div>"};x.send()})
+}else{
+var x=new XMLHttpRequest();x.open("GET",url,true);x.timeout=8000;x.onreadystatechange=function(){if(x.readyState!==4)return;if(x.status===200){try{acData[key]=JSON.parse(x.responseText);rAC(key,acData[key],list)}catch(e){list.innerHTML="<div class='ac-load'>"+L().ldErr+"</div>"}}else{list.innerHTML="<div class='ac-load'>"+L().noConn+" ("+x.status+")</div>"}};x.ontimeout=function(){list.innerHTML="<div class='ac-load'>"+L().tmout+"</div>"};x.onerror=function(){list.innerHTML="<div class='ac-load'>"+L().netErr+"</div>"};x.send()}
 }
-function fp(n){
-  if(typeof n!=="number"||isNaN(n))n=0;
-  return(n>=0?"+":"")+((Math.round(n*1000)/10).toFixed(1))+"%";
-}
- 
-function calc(){
-  try{
-    var tot=0,cnt=0,rows=[];
-    for(var i=0;i<9;i++){
-      var sel=g("s"+i);var v=sel?sel.value:"";var on=v!=="";var sc=0;
-      if(on){var idx=parseInt(v,10);if(!isNaN(idx)&&S[i]&&idx>=0&&idx<S[i].length)sc=S[i][idx]}
-      tot+=sc;if(on)cnt++;rows.push({n:NM[i],s:sc,on:on});
-    }
-    tx("pC",cnt+"/9");tx("zV",fp(tot));
-    var isDark=document.body.getAttribute("data-theme")==="dark";
-    var coralC=isDark?"#e07b5a":"#993c1d";
-    var greenC=isDark?"#4ecca3":"#0f6e56";
-    st("zV","color",tot>0?coralC:tot<0?greenC:"");
-    var zp=g("zP");if(zp)zp.style.borderColor=tot>0?"rgba(224,123,90,.3)":tot<0?"rgba(78,204,163,.3)":"";
- 
-    var h="";
-    for(var j=0;j<rows.length;j++){
-      var rr=rows[j],w=Math.min(Math.abs(rr.s)/0.3,1)*50;
-      var cc=rr.s>0?"cp":rr.s<0?"cn":"cz";
-      var bs="";
-      if(rr.s>0)bs="left:50%;width:"+w+"%;background:"+coralC;
-      else if(rr.s<0)bs="right:50%;width:"+w+"%;background:"+greenC;
-      h+="<div class='sc'><span class='sc-n "+(rr.on?"on":"off")+"'>"+rr.n+"</span><div style='flex:1;display:flex;align-items:center;gap:5px'><div class='sc-b'><div class='sc-m'></div>"+(bs?"<div class='sc-f' style='"+bs+"'></div>":"")+"</div><span class='sc-v "+cc+"'>"+fp(rr.s)+"</span></div></div>";
-    }
-    var tw=Math.min(Math.abs(tot)/0.5,1)*50,tc=tot>0?"cp":tot<0?"cn":"cz",tb="";
-    if(tot>0)tb="left:50%;width:"+tw+"%;background:"+coralC;
-    else if(tot<0)tb="right:50%;width:"+tw+"%;background:"+greenC;
-    h+="<div class='sc sc-tt'><span class='sc-n on' style='font-weight:800'>Gesamt</span><div style='flex:1;display:flex;align-items:center;gap:5px'><div class='sc-b'><div class='sc-m'></div>"+(tb?"<div class='sc-f' style='"+tb+"'></div>":"")+"</div><span class='sc-v "+tc+"' style='font-weight:800'>"+fp(tot)+"</span></div></div>";
-    var sa=g("sA");if(sa)sa.innerHTML=h;
- 
-    var tt=vl("sT"),vc=vl("sV");
-    var hrs=parseInt(vl("rH"),10);if(isNaN(hrs))hrs=3;
-    var wait=parseInt(vl("rW"),10);if(isNaN(wait))wait=0;
-    tx("vH",hrs+" h");tx("vW",(wait*15)+" min");
-    st("bH","display",tt==="hourly"?"block":"none");
- 
-    var base=0;
-    if(tt==="ptp")base=(PP[vc]||125)/1.19;
-    else if(tt==="km")base=Math.max((KN[vc]||95),curKm*(KR[vc]||2.5))/1.19;
-    else base=(hrs*(HH[vc]||85))/1.19;
- 
-    var zu=base*tot,wa=wait*25/1.19,ne=base+zu+wa,mw=ne*0.19,br=ne+mw;
- 
-    tx("tp",fm(br));tx("ts","netto "+fm(ne));
-    tx("cB",fm(base));
-    tx("cZL","Zuschlag ("+fp(tot)+")");tx("cZ",fm(zu));
-    st("cZ","color",zu>0?coralC:zu<0?greenC:"");
-    tx("cWL","Wartezeit ("+wait+"\u00d715 min)");tx("cW",fm(wa));
-    tx("cN",fm(ne));tx("cE",fm(br));
-    tx("cM","inkl. 19% MwSt. ("+fm(mw)+")");
- 
-    if(oriName&&dstName){tx("rI",oriName+" \u2192 "+dstName+" ("+curKm+" km)");st("rI","display","block")}
-    else{st("rI","display","none")}
-  }catch(err){}
-}
- 
-/* === GEOCODING (identical) === */
-var acTimer={O:null,D:null};var acData={O:null,D:null};
-function setupAC(key,inputId,listId){
-  var inp=g(inputId),list=g(listId);if(!inp||!list)return;
-  inp.addEventListener("input",function(){
-    clearTimeout(acTimer[key]);var q=inp.value.trim();
-    if(q.length<3){list.style.display="none";return}
-    list.innerHTML="<div class='ac-load'>Suche...</div>";list.style.display="block";
-    acTimer[key]=setTimeout(function(){searchPlace(key,q,list)},500);
-  });
-  inp.addEventListener("focus",function(){if(acData[key]&&acData[key].length)list.style.display="block"});
-}
-function searchPlace(key,q,list){
-  var xhr=new XMLHttpRequest();
-  xhr.open("GET","https://nominatim.openstreetmap.org/search?format=json&q="+encodeURIComponent(q)+"&countrycodes=de,at,ch&limit=5&addressdetails=1",true);
-  xhr.timeout=8000;
-  xhr.onreadystatechange=function(){if(xhr.readyState!==4)return;if(xhr.status===200){try{var data=JSON.parse(xhr.responseText);acData[key]=data;renderAC(key,data,list)}catch(e){list.innerHTML="<div class='ac-load'>Fehler</div>"}}else{list.innerHTML="<div class='ac-load'>Keine Verbindung</div>"}};
-  xhr.ontimeout=function(){list.innerHTML="<div class='ac-load'>Timeout</div>"};
-  xhr.onerror=function(){list.innerHTML="<div class='ac-load'>Netzwerkfehler</div>"};xhr.send();
-}
-function renderAC(key,data,list){
-  if(!data||!data.length){list.innerHTML="<div class='ac-load'>Keine Ergebnisse</div>";return}
-  list.innerHTML="";
-  for(var i=0;i<data.length;i++){var div=document.createElement("div");div.className="ac-item";div.textContent=data[i].display_name;div.setAttribute("data-key",key);div.setAttribute("data-idx",String(i));div.addEventListener("mousedown",acPick);div.addEventListener("touchstart",acPick,{passive:false});list.appendChild(div)}
-}
-function acPick(e){
-  e.preventDefault();e.stopPropagation();
-  var key=this.getAttribute("data-key"),idx=parseInt(this.getAttribute("data-idx"),10);
-  var d=acData[key];if(!d||!d[idx])return;var r=d[idx];
-  var short=r.display_name.split(",").slice(0,2).join(", ");
-  var coord={lat:parseFloat(r.lat),lon:parseFloat(r.lon)};
-  if(key==="O"){g("iO").value=short;oriCoord=coord;oriName=short}else{g("iD").value=short;dstCoord=coord;dstName=short}
-  g("ac"+key).style.display="none";
-  if(oriCoord&&dstCoord)doRoute();
-}
+function rAC(key,data,list){if(!data||!data.length){list.innerHTML="<div class='ac-load'>"+L().noRes+"</div>";return}list.innerHTML="";
+for(var i=0;i<data.length;i++){var d=document.createElement("div");d.className="ac-item";d.textContent=data[i].display_name;d.setAttribute("data-key",key);d.setAttribute("data-idx",String(i));d.addEventListener("mousedown",acP);d.addEventListener("touchend",acP,{passive:false});d.addEventListener("click",acP);list.appendChild(d)}}
+var acPicked=false;
+function acP(e){e.preventDefault();e.stopPropagation();if(acPicked)return;acPicked=true;setTimeout(function(){acPicked=false},300);var key=this.getAttribute("data-key"),idx=parseInt(this.getAttribute("data-idx"),10);var d=acData[key];if(!d||!d[idx])return;var r=d[idx];var short=r.display_name.split(",").slice(0,2).join(", ");var coord={lat:parseFloat(r.lat),lon:parseFloat(r.lon)};
+if(key==="O"){g("iO").value=short;oriCoord=coord;oriName=short}else{g("iD").value=short;dstCoord=coord;dstName=short}g("ac"+key).style.display="none";if(oriCoord&&dstCoord)doRoute()}
 document.addEventListener("touchstart",function(e){if(!e.target.closest(".ac-wrap")){g("acO").style.display="none";g("acD").style.display="none"}},{passive:true});
 document.addEventListener("click",function(e){if(!e.target.closest(".ac-wrap")){g("acO").style.display="none";g("acD").style.display="none"}});
+var rSvg='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function rBT(){return rSvg+"<span data-t='btnRoute'>"+L().btnRoute+"</span>"}
+function doRoute(){var t=L();if(!oriCoord||!dstCoord){tx("kS",t.rBoth);return}var btn=g("rbtn");if(btn){btn.disabled=true;btn.textContent=t.calc_ing}tx("kS",t.calc_ing.toLowerCase()+"...");var kb=g("kmBox");if(kb)kb.className="kmr";
+var rUrl="https://router.project-osrm.org/route/v1/driving/"+oriCoord.lon+","+oriCoord.lat+";"+dstCoord.lon+","+dstCoord.lat+"?overview=false";
+function rOk(d){try{if(d.routes&&d.routes.length>0){curKm=Math.round(d.routes[0].distance/1000);tx("kV",curKm+" km");tx("kS",L().rDrive);var ki=g("iK");if(ki)ki.value=curKm;if(kb)kb.className="kmr ok";if(btn){btn.disabled=false;btn.innerHTML=rBT()}calc();return true}}catch(e){}return false}
+function rFail(){if(btn){btn.disabled=false;btn.innerHTML=rBT()}hvF();calc()}
+if(typeof fetch==="function"){
+fetch(rUrl,{method:"GET",headers:{"Accept":"application/json"}}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){if(!rOk(d))rFail()}).catch(function(){rFail()})
+}else{
+var xhr=new XMLHttpRequest();xhr.open("GET",rUrl,true);xhr.timeout=10000;
+xhr.onreadystatechange=function(){if(xhr.readyState!==4)return;if(xhr.status===200){try{if(rOk(JSON.parse(xhr.responseText)))return}catch(e){}}rFail()};
+xhr.ontimeout=function(){rFail()};xhr.onerror=function(){rFail()};xhr.send()}}
+function hvF(){if(!oriCoord||!dstCoord)return;var R=6371,dL=(dstCoord.lat-oriCoord.lat)*Math.PI/180,dN=(dstCoord.lon-oriCoord.lon)*Math.PI/180;var a=Math.sin(dL/2)*Math.sin(dL/2)+Math.cos(oriCoord.lat*Math.PI/180)*Math.cos(dstCoord.lat*Math.PI/180)*Math.sin(dN/2)*Math.sin(dN/2);curKm=Math.round(2*R*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))*1.3);tx("kV",curKm+" km");tx("kS",L().rAir);var ki=g("iK");if(ki)ki.value=curKm;var kb=g("kmBox");if(kb)kb.className="kmr"}
  
-/* === ROUTING (identical) === */
-function doRoute(){
-  if(!oriCoord||!dstCoord){tx("kS","Bitte beide Orte");return}
-  var btn=g("rbtn");if(btn){btn.disabled=true;btn.textContent="Berechne..."}
-  tx("kS","berechne...");var kb=g("kmBox");if(kb)kb.className="kmr";
-  var xhr=new XMLHttpRequest();
-  xhr.open("GET","https://router.project-osrm.org/route/v1/driving/"+oriCoord.lon+","+oriCoord.lat+";"+dstCoord.lon+","+dstCoord.lat+"?overview=false",true);
-  xhr.timeout=10000;
-  xhr.onreadystatechange=function(){
-    if(xhr.readyState!==4)return;
-    if(btn){btn.disabled=false;btn.innerHTML='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Route berechnen'}
-    if(xhr.status===200){try{var d=JSON.parse(xhr.responseText);if(d.routes&&d.routes.length>0){curKm=Math.round(d.routes[0].distance/1000);tx("kV",curKm+" km");tx("kS","(Fahrtstrecke)");var ki=g("iK");if(ki)ki.value=curKm;if(kb)kb.className="kmr ok";calc();return}}catch(e){}}
-    hvFall();calc();
-  };
-  xhr.ontimeout=function(){if(btn){btn.disabled=false;btn.innerHTML='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Route berechnen'}hvFall();calc()};
-  xhr.onerror=function(){if(btn){btn.disabled=false;btn.innerHTML='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Route berechnen'}hvFall();calc()};
-  xhr.send();
-}
-function hvFall(){
-  if(!oriCoord||!dstCoord)return;
-  var R=6371,dL=(dstCoord.lat-oriCoord.lat)*Math.PI/180,dN=(dstCoord.lon-oriCoord.lon)*Math.PI/180;
-  var a=Math.sin(dL/2)*Math.sin(dL/2)+Math.cos(oriCoord.lat*Math.PI/180)*Math.cos(dstCoord.lat*Math.PI/180)*Math.sin(dN/2)*Math.sin(dN/2);
-  curKm=Math.round(2*R*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))*1.3);
-  tx("kV",curKm+" km");tx("kS","(ca. Luftlinie)");
-  var ki=g("iK");if(ki)ki.value=curKm;var kb=g("kmBox");if(kb)kb.className="kmr";
-}
- 
-/* === INIT (identical) === */
-function init(){
-  var i,sels=document.querySelectorAll("select");
-  for(i=0;i<sels.length;i++)sels[i].addEventListener("change",calc);
-  var ranges=document.querySelectorAll("input[type=range]");
-  for(i=0;i<ranges.length;i++){ranges[i].addEventListener("input",calc);ranges[i].addEventListener("change",calc)}
-  var km=g("iK");
-  if(km){km.addEventListener("input",function(){var v=parseFloat(this.value);if(!isNaN(v)&&v>0){curKm=Math.round(v);tx("kV",curKm+" km");tx("kS","(manuell)");calc()}});km.addEventListener("change",function(){var v=parseFloat(this.value);if(!isNaN(v)&&v>0){curKm=Math.round(v);tx("kV",curKm+" km");tx("kS","(manuell)");calc()}})}
-  var btn=g("rbtn");if(btn)btn.addEventListener("click",doRoute);
-  setupAC("O","iO","acO");setupAC("D","iD","acD");
-  calc();
-}
+function init(){var i,sels=document.querySelectorAll("select");for(i=0;i<sels.length;i++)sels[i].addEventListener("change",calc);
+var ranges=document.querySelectorAll("input[type=range]");for(i=0;i<ranges.length;i++){ranges[i].addEventListener("input",calc);ranges[i].addEventListener("change",calc)}
+var km=g("iK");if(km){km.addEventListener("input",function(){var v=parseFloat(this.value);if(!isNaN(v)&&v>0){curKm=Math.round(v);tx("kV",curKm+" km");tx("kS",L().rManual);calc()}});km.addEventListener("change",function(){var v=parseFloat(this.value);if(!isNaN(v)&&v>0){curKm=Math.round(v);tx("kV",curKm+" km");tx("kS",L().rManual);calc()}})}
+var btn=g("rbtn");if(btn)btn.addEventListener("click",doRoute);
+setupAC("O","iO","acO");setupAC("D","iD","acD");setLang(lang)}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
 </script>
